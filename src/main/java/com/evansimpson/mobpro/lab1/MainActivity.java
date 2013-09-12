@@ -1,4 +1,4 @@
-package com.evansimpson.mobpro.lab0;
+package com.evansimpson.mobpro.lab1;
 
 import android.os.Bundle;
 import android.app.Activity;

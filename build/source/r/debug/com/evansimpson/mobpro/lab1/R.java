@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.evansimpson.mobpro.lab0;
+package com.evansimpson.mobpro.lab1;
 
 public final class R {
     public static final class attr {
