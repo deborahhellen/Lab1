@@ -32,17 +32,14 @@ public class ArrayAdapterDemo extends ListActivity {
 
         tasks = new ArrayList<String>();
 
-        tasks.add("other string");
-        tasks.add("string");
-        tasks.add("whee!");
-        tasks.remove(2);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setListAdapter(new ArrayAdapter<String>(
+        final ArrayAdapter<String> aa = new ArrayAdapter<String>(
                 this,
                 android.R.layout.simple_expandable_list_item_1,
-                tasks));
+                tasks);
+        setListAdapter(aa);
         selection=(TextView)findViewById(R.id.selection);
 
 
@@ -53,7 +50,8 @@ public class ArrayAdapterDemo extends ListActivity {
                 //tasks.add("yay");
                final EditText editText = (EditText) findViewById(R.id.editText);
                String editTextStr = editText.getText().toString();
-               tasks.add(editTextStr);
+               tasks.add(0, editTextStr);
+               aa.notifyDataSetChanged();
            }
         });
     }
