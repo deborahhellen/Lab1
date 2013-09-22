@@ -54,6 +54,15 @@ public class ArrayAdapterDemo extends ListActivity {
                aa.notifyDataSetChanged();
            }
         });
+
+        Button d = (Button) findViewById(R.id.button2); // creates a button b and attaching it to the UI element called button1 on the view
+        d.setOnClickListener(new View.OnClickListener() { // creates and sets an onClickListener for the button b
+            @Override
+            public void onClick(View view) {
+                tasks.remove(0);
+                aa.notifyDataSetChanged();
+            }
+        });
     }
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
